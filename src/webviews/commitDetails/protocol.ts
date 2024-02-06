@@ -75,6 +75,7 @@ export interface State extends WebviewState {
 	autolinkedIssues?: IssueOrPullRequest[];
 	pullRequest?: PullRequestShape;
 	wip?: Wip;
+	wipPullRequest?: PullRequestShape;
 }
 
 export type ShowCommitDetailsViewCommandArgs = string[];
@@ -138,7 +139,7 @@ export interface DidChangeParams {
 }
 export const DidChangeNotificationType = new IpcNotificationType<DidChangeParams>('commit/didChange', true);
 
-export type DidChangeWipStateParams = Pick<Serialized<State>, 'wip'>;
+export type DidChangeWipStateParams = Pick<Serialized<State>, 'wip' | 'wipPullRequest'>;
 export const DidChangeWipStateNotificationType = new IpcNotificationType<DidChangeWipStateParams>(
 	'commit/didChange/wip',
 );
