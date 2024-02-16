@@ -54,6 +54,10 @@ export interface GitBranchShape {
 	name: string;
 	repoPath: string;
 	upstream?: { name: string; missing: boolean };
+	tracking?: {
+		ahead: number;
+		behind: number;
+	};
 }
 
 export interface Wip {
@@ -61,6 +65,10 @@ export interface Wip {
 	repositoryCount: number;
 	branch?: GitBranchShape;
 	pullRequest?: PullRequestShape;
+	repo: {
+		name: string;
+		path: string;
+	};
 }
 
 export interface State extends WebviewState {
