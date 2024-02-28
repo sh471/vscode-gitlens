@@ -8,6 +8,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 ### Added
 
+- Adds a new `gitlens.views.collapseWorktreesWhenPossible` setting to specify whether to try to collapse the opened worktrees into a single (common) repository in the views when possible
 - Adds the repository name as a prefix to worktree name when adding to the current workspace
 - Adds a better message when stashing only untracked files without including untracked files
 
