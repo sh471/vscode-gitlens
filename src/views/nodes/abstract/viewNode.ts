@@ -137,7 +137,7 @@ export interface AmbientContext {
 	readonly wsRepositoryDescriptor?: CloudWorkspaceRepositoryDescriptor | LocalWorkspaceRepositoryDescriptor;
 	readonly worktree?: GitWorktree;
 
-	readonly openWorktreeBranches?: string[];
+	readonly openWorktreeBranches?: Set<string>;
 }
 
 export function getViewNodeId(type: string, context: AmbientContext): string {
